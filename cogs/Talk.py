@@ -34,7 +34,7 @@ class Talk(commands.Cog):
                         "ただし、自分の直近の行動に似た行動を取るな。"
                     )
                     await channel.send(response_text)
-        self.message_probability = min(self.message_probability + 0.6, 1.0)
+        self.message_probability = min(self.message_probability + 0.06, 1.0)
 
     @commands.Cog.listener("on_message")
     async def on_message(self, message) -> None:
