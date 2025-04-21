@@ -48,11 +48,6 @@ class Talk(commands.Cog):
         # 隠しコマンド: コマンドツリーの同期
         if "必殺！コマンド同期！" in message.content:
             synced = await self.bot.tree.sync()
-            print(f"synced {len(synced)} commands")
-
-            # デバッグ用：デバッグサーバーにコマンドをコピー
-            sync = await self.bot.tree.sync(guild=discord.Object(id=262271138065940481))
-            print(sync)
 
         # 生息地以外のメッセージには反応しない
         channel_id = message.channel.id
